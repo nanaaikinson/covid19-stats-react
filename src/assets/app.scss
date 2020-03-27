@@ -1,0 +1,30 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.card {
+  border-radius: 3px;
+  border-color: #eee;
+}
+
+.dark-theme {
+  background-color: #131733;
+  color: #e1e3eb !important;
+
+  .card {
+    background-color: #1b223f;
+    border-color: #1b223f;
+  }
+
+  .custom-select {
+    background-color: #1b223f;
+    color: #e1e3eb !important;
+  }
+
+  .table {
+    color: #e1e3eb !important;
+
+    td,
+    th {
+      border-top: 1px solid rgba(170, 183, 255, 0.5);
+    }
+  }
+}
