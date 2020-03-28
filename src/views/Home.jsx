@@ -72,7 +72,7 @@ class Home extends Component {
    * Country
    */
   countryData = country => {
-    const data = this.state.data;
+    const { data } = this.state;
     const confirmed = [];
     const recovered = [];
     const deaths = [];
@@ -148,7 +148,7 @@ class Home extends Component {
 
   // Set theme
   toggleTheme = e => {
-    const theme = this.state.theme;
+    const { theme } = this.state;
 
     if (!theme) {
       document.body.classList.add("dark-theme");

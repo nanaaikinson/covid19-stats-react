@@ -92,6 +92,7 @@ export const donut = {
   options: {
     labels: [],
     legend: {
+      show: true,
       position: "bottom"
     },
     dataLabels: {
