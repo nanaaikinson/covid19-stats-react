@@ -41,10 +41,10 @@ class Home extends Component {
   // Lifecycle Methods
   async componentDidMount() {
     const dataUrl = "https://pomber.github.io/covid19/timeseries.json";
-    const clientUrl = "http://ip-api.com/json";
-    const clientResponse = await Axios.get(clientUrl);
+    //const clientUrl = "https://ip-api.com/json";
+    //const clientResponse = await Axios.get(clientUrl);
     const dataResponse = await Axios.get(dataUrl);
-    const clientData = clientResponse.data;
+    //const clientData = clientResponse.data;
     const data = dataResponse.data;
     const countries = [];
     let date = "";
@@ -56,13 +56,14 @@ class Home extends Component {
 
     // Set state
     this.setState({ data, countries, date });
+    this.worldData();
 
     // Set data
-    if ("country" in clientData) {
-      this.countryData(clientData.country);
-    } else {
-      this.worldData();
-    }
+    // if ("country" in clientData) {
+    //   this.countryData(clientData.country);
+    // } else {
+    //   this.worldData();
+    // }
   }
 
   // Component Methods
@@ -298,19 +299,6 @@ class Home extends Component {
     return (
       <div className="container my-5">
         <div className="d-flex">
-          <div>
-            <p>
-              Inspired by{" "}
-              <a
-                target="_blank"
-                href="https://github.com/thomas-alrek"
-                rel="noopener noreferrer"
-              >
-                Thomas Alrek
-              </a>
-            </p>
-          </div>
-
           <div className="custom-control custom-switch ml-auto">
             <input
               type="checkbox"
@@ -457,25 +445,18 @@ class Home extends Component {
           </div>
 
           <div className="col-md-8 offset-md-2">
+            <div></div>
             <p className="text-center">
-              <i>
-                All data and information provided on this site is for
-                informational purposes only. I make no representation as to
-                accuracy, completeness, currentness, suitability, or validity of
-                any information on this site and will not be liable for any
-                errors, omissions, or delays in this information or any losses,
-                injuries, or damages arising from its display or use. All
-                information is provided on an as-is basis.
-              </i>
-            </p>
-          </div>
-
-          <div className="col-md-12">
-            <hr />
-          </div>
-
-          <div className="col-md-8 offset-md-2">
-            <p className="text-center">
+              {/* <span>
+              Inspired by{" "}
+              <a
+                target="_blank"
+                href="https://github.com/thomas-alrek"
+                rel="noopener noreferrer"
+              >
+                Thomas Alrek
+              </a>
+              </span> */}
               <span>
                 Developed by{" "}
                 <a href="https://github.com/nanaaikinson">
@@ -491,7 +472,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-// https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/#6-doughnut-chart
-// https://github.com/jerairrest/react-chartjs-2
-// 0244196677
