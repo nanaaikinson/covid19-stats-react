@@ -3,7 +3,7 @@ export const line = {
   datasets: [
     {
       label: "Confirmed",
-      fill: false,
+      fill: true,
       lineTension: 0.1,
       backgroundColor: "rgba(0, 143, 251, 0.4)",
       borderColor: "rgba(0, 143, 251, 1)",
@@ -24,7 +24,7 @@ export const line = {
     },
     {
       label: "Recovered",
-      fill: false,
+      fill: true,
       lineTension: 0.1,
       backgroundColor: "rgba(0, 227, 150, 0.4)",
       borderColor: "rgba(0, 227, 150, 1)",
@@ -45,7 +45,7 @@ export const line = {
     },
     {
       label: "Deaths",
-      fill: false,
+      fill: true,
       lineTension: 0.1,
       backgroundColor: "rgba(255, 69, 96, 0.4)",
       borderColor: "rgba(255, 69, 96, 1)",
@@ -66,7 +66,7 @@ export const line = {
     },
     {
       label: "Existing",
-      fill: false,
+      fill: true,
       lineTension: 0.1,
       backgroundColor: "rgba(254, 176, 25, 0.4)",
       borderColor: "rgba(254, 176, 25, 1)",
