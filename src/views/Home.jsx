@@ -125,6 +125,7 @@ class Home extends Component {
     line.datasets[0].data = confirmed;
     line.datasets[1].data = recovered;
     line.datasets[2].data = deaths;
+    line.datasets[3].data = existing;
     line.options = {};
 
     // Donut
